@@ -1,0 +1,43 @@
+{
+    "name": "socket.io-ts-starter",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "ts-node-dev --respawn --transpile-only src/app.ts",
+        "dev": "./node_modules/.bin/dotenvx run --env-file env/.env.development -- ts-node-dev --respawn --transpile-only src/app.ts",
+        "build": "tsc --outDir dist",
+        "prod": "./node_modules/.bin/dotenvx run --env-file env/.env.production -- pm2-runtime start dist/app.js --env production"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "connect-redis": "^7.1.1",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dayjs": "^1.11.11",
+        "express": "^4.19.2",
+        "express-session": "^1.18.0",
+        "ioredis": "^5.4.1",
+        "jsonwebtoken": "^9.0.2",
+        "multer": "1.4.5-lts.1",
+        "nodemailer": "^6.9.13",
+        "pino": "^8.21.0",
+        "pino-pretty": "^10.3.1",
+        "sharp": "^0.33.4"
+    },
+    "devDependencies": {
+        "@dotenvx/dotenvx": "^0.44.1",
+        "@types/body-parser": "^1.19.5",
+        "@types/cookie-parser": "^1.4.7",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/express-session": "^1.18.0",
+        "@types/jsonwebtoken": "^9.0.6",
+        "@types/multer": "^1.4.11",
+        "@types/node": "^20.12.11",
+        "@types/nodemailer": "^6.4.15",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.4.5"
+    },
+    "packageManager": "pnpm@8.8.0"
+}
